@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crave Hunter - Order Delicious Food</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <svg width="60" height="60" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="#ff6b6b" opacity="0.9"/>
+        <circle cx="50" cy="50" r="35" fill="#FFF8F0"/>
+        <path d="M50 15 L50 35 M50 65 L50 85 M15 50 L35 50 M65 50 L85 50" 
+              stroke="#ff6b6b" stroke-width="4" stroke-linecap="round"/>
+        <path d="M40 40 L60 60 M40 60 L60 40" 
+              stroke="#ff6b6b" stroke-width="4" stroke-linecap="round"/>
+        <path d="M50 30 L50 40 M50 60 L50 70 M30 50 L40 50 M60 50 L70 50" 
+              stroke="#ff6b6b" stroke-width="2"/>
+        <path d="M35 40 L40 45 L45 40 L40 35 Z" fill="#ff6b6b"/>
+        <path d="M55 60 L60 55 L65 60 L60 65 Z" fill="#ff6b6b"/>
+      </svg>
+      <h1>Crave Hunter</h1>
+    </div>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search for food...">
+      <button id="search-btn"><i class="fas fa-search"></i></button>
+      <div class="search-suggestions" id="search-suggestions"></div>
+    </div>
+    <nav class="nav-menu">
+      <a href="#" class="active">Home</a>
+      <a href="#popular-items" class="menu-link">Menu</a>
+      <a href="#">Offers</a>
+      <a href="#">About</a>
+    </nav>
+    <div class="header-icons">
+      <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+      <div class="address" id="add-address">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Your Address</span>
+      </div>
+      <div class="cart-icon" id="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="hero">
+      <div class="video-container">
+        <video autoplay muted loop playsinline>
+          <source src="https://b.zmtcdn.com/data/file_assets/2627bbed9d6c068e50d2aadcca11ddbb1743095925.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <h2>Craving Something Delicious?</h2>
+        <p class="tagline">Hunt it. Crave it. Get it.</p>
+        <p>Order from your favorite restaurants with just a few clicks</p>
+        <button class="order-now">Order Now</button>
+      </div>
+    </section>
+
+    <section class="category-section">
+      <h2 class="section-title">Food Categories</h2>
+      <div class="category-list">
+        <div class="category-card" data-category="all">
+          <h3>All Items</h3>
+        </div> 
+        <div class="category-card" data-category="biryani">
+          <h3>Biryani</h3>
+        </div>
+        <div class="category-card" data-category="chicken">
+          <h3>Chicken</h3>
+        </div>
+        <div class="category-card" data-category="vegetarian">
+          <h3>Paneer</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="food-section" id="popular-items">
+      <h2 class="section-title">Popular Items</h2>
+      <div class="food-grid" id="food-grid"></div>
+    </section>
+
+    <div class="cart-overlay" id="cart-overlay">
+      <div class="cart-container">
+        <div class="cart-header">
+          <h2>Your Cart</h2>
+          <button class="close-cart" id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-summary">
+          <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total">₹0.00</span>
+          </div>
+          <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Crave Hunter</h3>
+        <p>Delivering delicious food since 2024</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#popular-items">Menu</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-phone"></i> +91 0123456789</p>
+        <p><i class="fas fa-envelope"></i> info@cravehunter.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Crave Hunter. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
