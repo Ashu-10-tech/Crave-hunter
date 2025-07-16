@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Food data (keep your existing array exactly as is)
+  // Food data 
   const foodItems = [
     {
       id: 1,
@@ -233,9 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
     elements.cartOverlay.style.display = isVisible ? 'none' : 'flex';
   }
 
-  /* ========== EXISTING FUNCTIONALITY ========== */
-
-  // Dark mode (keep your existing function)
+  // Dark mode 
   function initDarkMode() {
     const themeToggle = document.querySelector('.theme-toggle');
     const isDark = localStorage.getItem('darkMode') === 'true';
@@ -253,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Delivery time (keep your existing function)
+  // Delivery time 
   function initDeliveryTime() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -277,7 +275,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Search and filter (keep your existing functions)
+  // Search and filter 
   function handleSearch() {
     const searchTerm = elements.searchInput.value.toLowerCase().trim();
     const filteredItems = searchTerm 
